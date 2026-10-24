@@ -3,10 +3,14 @@
   "private": true,
   "version": "2.0.0",
   "description": "SmartReviewAI - AI-Powered Review Intelligence & NLP Platform",
+  "workspaces": [
+    "web"
+  ],
   "scripts": {
-    "build": "npm run build --prefix web",
-    "dev": "npm run dev --prefix web",
-    "preview": "npm run preview --prefix web",
+    "install:web": "npm --prefix web install --include=dev",
+    "build": "npm --prefix web install --include=dev && npm --prefix web run build",
+    "dev": "npm --prefix web run dev",
+    "preview": "npm --prefix web run preview",
     "deploy": "vercel --prod"
   }
 }
