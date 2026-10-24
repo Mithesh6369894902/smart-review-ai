@@ -1,0 +1,25 @@
+# SmartReviewAI — always-on cloud (Render blueprint)
+# Push this repo to GitHub, then Render → New → Blueprint → select repo.
+# You get: API at https://smartreviewai-api.onrender.com
+#          App at https://smartreviewai-web.onrender.com
+services:
+  - type: web
+    name: smartreviewai-api
+    runtime: python
+    rootDir: cloud
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+  - type: web
+    name: smartreviewai-web
+    runtime: static
+    rootDir: web
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

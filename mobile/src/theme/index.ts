@@ -1,0 +1,101 @@
+export const theme = {
+  colors: {
+    primary: '#6C63FF',
+    primaryLight: '#8B83FF',
+    primaryDark: '#4A42DB',
+    secondary: '#FF6584',
+    secondaryLight: '#FF8FA3',
+    accent: '#00D9FF',
+    accentLight: '#33E0FF',
+    background: '#0B0B1A',
+    background2: '#0F0F23',
+    surface: '#16163A',
+    surfaceLight: '#252550',
+    card: '#1C1C46',
+    cardLight: '#26265A',
+    text: '#FFFFFF',
+    textSecondary: '#A0A0C0',
+    textMuted: '#6B6B8D',
+    positive: '#00E676',
+    positiveLight: '#69F0AE',
+    negative: '#FF5252',
+    negativeLight: '#FF8A80',
+    neutral: '#FFD740',
+    neutralLight: '#FFE57F',
+    border: '#2A2A5A',
+    success: '#00E676',
+    error: '#FF5252',
+    warning: '#FFD740',
+    gradient: {
+      primary: ['#6C63FF', '#8B83FF'],
+      secondary: ['#FF6584', '#FF8FA3'],
+      accent: ['#00D9FF', '#33E0FF'],
+      dark: ['#0F0F23', '#1A1A3E'],
+      card: ['#1E1E45', '#252550'],
+      success: ['#00E676', '#69F0AE'],
+      error: ['#FF5252', '#FF8A80'],
+    }
+  },
+  spacing: {
+    xs: 4,
+    sm: 8,
+    md: 16,
+    lg: 24,
+    xl: 32,
+    xxl: 48,
+  },
+  borderRadius: {
+    sm: 8,
+    md: 14,
+    lg: 20,
+    xl: 24,
+    full: 9999,
+  },
+  shadows: {
+    small: {
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.25,
+      shadowRadius: 4,
+      elevation: 3,
+    },
+    medium: {
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 6,
+    },
+    large: {
+      shadowColor: '#6C63FF',
+      shadowOffset: { width: 0, height: 8 },
+      shadowOpacity: 0.4,
+      shadowRadius: 16,
+      elevation: 12,
+    },
+  },
+  typography: {
+    h1: {
+      fontSize: 32,
+      fontWeight: 'bold' as const,
+    },
+    h2: {
+      fontSize: 24,
+      fontWeight: 'bold' as const,
+    },
+    h3: {
+      fontSize: 20,
+      fontWeight: '600' as const,
+    },
+    body: {
+      fontSize: 16,
+      fontWeight: 'normal' as const,
+    },
+    caption: {
+      fontSize: 12,
+      fontWeight: 'normal' as const,
+    },
+  },
+};
+
+export type Theme = typeof theme;

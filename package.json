@@ -1,0 +1,12 @@
+{
+  "name": "smartreviewai",
+  "private": true,
+  "version": "2.0.0",
+  "description": "SmartReviewAI - AI-Powered Review Intelligence & NLP Platform",
+  "scripts": {
+    "build": "npm run build --prefix web",
+    "dev": "npm run dev --prefix web",
+    "preview": "npm run preview --prefix web",
+    "deploy": "vercel --prod"
+  }
+}

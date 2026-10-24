@@ -1,0 +1,18 @@
+# Android & Native builds
+*.apk
+web/android/
+mobile/
+
+# Python & backend data
+backend/__pycache__/
+backend/logs/
+backend/data/*.db
+backend/.env
+.venv/
+__pycache__/
+
+# Node & Build artifacts
+node_modules/
+.git/
+.gemini/
+screenshots/
